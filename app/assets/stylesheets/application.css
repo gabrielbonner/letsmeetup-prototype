@@ -15,23 +15,23 @@
  */
 
 * {
-  border: 1px solid red;
-}
-
-.boxes {
-  height: 100px;
-  width: 150px;
+  border: 1px solid black;
   text-align: center;
-}
-
-.flex-container {
-  display: flex;
-  justify-content: flex-end;
+  vertical-align: center
+  width: 170px;
+  padding: 10px;
 }
 
 .user {
-  border: 1px solid black;
-  text-align: center;
-  width: 170px;
+  width: 15%;
   padding: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 80%;
 }

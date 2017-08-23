@@ -1,21 +1,49 @@
 <div class="main">
-  <div class="header">
-    <div></div>
-    <div>
-      <%= react_component('listUsers', users: @users) %>
-    </div>
-  </div>
-  <div class="body">
-    <div class="left">
-      <div class="boxes">Aug 22, 2-3pm</div>
-      <div class="boxes">Aug 22, 3-4pm</div>
-      <div class="boxes">Aug 24, 10-11am</div>
-      <div class="boxes">Aug 24, 12-1pm</div>
-    </div>
-    <div class="right"></div>
-  </div>
-  <div class="footer">
-    <div></div>
-    <div></div>
-  </div>
+
+    <table class="table">
+      <tr>
+        <th></th>
+        <% react_component('listUsers', users: @users) %>
+        <th class="user">Fiona</th>
+        <th class="user">Gabriel</th>
+        <th class="user">Jeremy</th>
+        <th class="user">Kevin</th>
+        <th class="user">Kyle</th>
+      </tr>
+      <tr>
+        <td>Aug 22, 2-3pm</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Aug 22, 3-4pm</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Aug 23, 10-11am</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
 </div>
+
+<!--
+  TODO:
+  - change <td>s to clickable, cycle between white/green/yellow/red
+  - establish relationships between Users and Timeslots
+  - change <tr>s into Timeslot components, ordered chronologically by date/time
+  - allow users to add new timeslots
+  - clicking each <td> initiates Ajax call and saves it in db
+  - when a column is fully green, send out confirmation email
+-->
