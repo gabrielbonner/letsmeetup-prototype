@@ -5,7 +5,7 @@ var listUsers = React.createClass({
 
   render() {
     return (
-      <div>
+      <div className="flex-container">
         {this.props.users.map((user, index) => {
           return <div key={index} className="user">{user.username}</div>;
         })}

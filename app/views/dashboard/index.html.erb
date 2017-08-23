@@ -1,3 +1,21 @@
-<h1>Dashboard</h1>
-
-<%= react_component('listUsers', users: @users) %>
+<div class="main">
+  <div class="header">
+    <div></div>
+    <div>
+      <%= react_component('listUsers', users: @users) %>
+    </div>
+  </div>
+  <div class="body">
+    <div class="left">
+      <div class="boxes">Aug 22, 2-3pm</div>
+      <div class="boxes">Aug 22, 3-4pm</div>
+      <div class="boxes">Aug 24, 10-11am</div>
+      <div class="boxes">Aug 24, 12-1pm</div>
+    </div>
+    <div class="right"></div>
+  </div>
+  <div class="footer">
+    <div></div>
+    <div></div>
+  </div>
+</div>
