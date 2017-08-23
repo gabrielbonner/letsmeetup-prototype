@@ -1,11 +1,15 @@
 var listUsers = React.createClass({
-  render: function() {
+  componentDidMount() {
+    console.log("Mounted users");
+  },
+
+  render() {
     return (
-      <ul>
-        {this.props.users.map(function(user){
-          return <li>{user.username} - {user.email}</li>;
+      <div>
+        {this.props.users.map((user, index) => {
+          return <div key={index} className="user">{user.username}</div>;
         })}
-      </ul>
+      </div>
     )
   }
 })
