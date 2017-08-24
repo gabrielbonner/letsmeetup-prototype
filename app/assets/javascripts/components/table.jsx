@@ -11,25 +11,26 @@ class Row extends React.Component {
     this.toggleColor = this.toggleColor.bind(this);
   }
 
-  toggleColor() {
+  toggleColor(name) {
     const colors = {
       white: "green",
       green: "yellow",
       yellow: "red",
       red: "white",
     }
-    this.setState({ fiona: colors[this.state.fiona] });
-    console.log(this.state.fiona);
+    this.setState({ name: colors[this.state.name] });
+    console.log(this.state.name);
   }
 
   render() {
-      return <tr key={this.props.timeslot.id}>
-               <td>{this.props.timeslot.start}</td>
-               <td className={this.state.fiona} onClick={this.toggleColor}></td>
-               <td className={this.state.gabriel} onClick={this.toggleColor}></td>
-               <td className={this.state.jeremy} onClick={this.toggleColor}></td>
-               <td className={this.state.kevin} onClick={this.toggleColor}></td>
-               <td className={this.state.kyle} onClick={this.toggleColor}></td>
+      return <tr key={ this.props.timeslot.id }>
+               <td>{ this.props.timeslot.start }</td>
+               REMOVE THE .BIND AND RELOAD PAGE TO START INFINITE LOOP
+               <td className={ this.state.fiona } onClick={ this.toggleColor.bind("fiona") }></td>
+               <td className={ this.state.gabriel } onClick={ this.toggleColor }></td>
+               <td className={ this.state.jeremy } onClick={ this.toggleColor }></td>
+               <td className={ this.state.kevin } onClick={ this.toggleColor }></td>
+               <td className={ this.state.kyle } onClick={ this.toggleColor }></td>
             </tr>
   }
 }
