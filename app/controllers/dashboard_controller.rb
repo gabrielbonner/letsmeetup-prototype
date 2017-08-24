@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    @users = User.all
+    @timeslots = Timeslot.all
   end
 end
