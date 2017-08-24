@@ -36,8 +36,18 @@
   width: 80%;
 }
 
+.white {
+  background-color: white;
+}
+
 .green {
   background-color: green;
-  color: green;
-  background: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
 }
