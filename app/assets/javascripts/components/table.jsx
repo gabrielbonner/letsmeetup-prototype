@@ -17,6 +17,7 @@ class Row extends React.Component {
       green: "yellow",
       yellow: "red",
       red: "white",
+      white: "blue",
     }
     this.setState({ [name]: colors[this.state[name]] });
   }
@@ -24,6 +25,7 @@ class Row extends React.Component {
 
   render() {
     IMPORT MOMENT.JS
+    PUT COLOR KEY AT BOTTOM OF TABLE, BLUE=PREFERRED
     const date = new Date(this.props.timeslot.start).toDateString()
     const startHour = new Date(this.props.timeslot.start).getHours()
     const startMin = new Date(this.props.timeslot.start).getMinutes()
