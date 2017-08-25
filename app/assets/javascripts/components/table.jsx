@@ -19,18 +19,26 @@ class Row extends React.Component {
       red: "white",
     }
     this.setState({ [name]: colors[this.state[name]] });
-    console.log(this.state.name);
   }
 
+
   render() {
-      return <tr key={ this.props.timeslot.id }>
-               <td>{ this.props.timeslot.start }</td>
-               <td className={ this.state.fiona } onClick={() => this.toggleColor("fiona")}></td>
-               <td className={ this.state.gabriel } onClick={() => this.toggleColor("gabriel") }></td>
-               <td className={ this.state.jeremy } onClick={() => this.toggleColor("jeremy") }></td>
-               <td className={ this.state.kevin } onClick={() => this.toggleColor("kevin") }></td>
-               <td className={ this.state.kyle } onClick={() => this.toggleColor("kyle") }></td>
-            </tr>
+    IMPORT MOMENT.JS
+    const date = new Date(this.props.timeslot.start).toDateString()
+    const startHour = new Date(this.props.timeslot.start).getHours()
+    const startMin = new Date(this.props.timeslot.start).getMinutes()
+    const finishHour = new Date(this.props.timeslot.finish).getHours()
+    const finishMin = new Date(this.props.timeslot.finish).getMinutes()
+      return (
+        <tr key={ this.props.timeslot.id }>
+           <td>{ date } <br/> from { startHour }:{ startMin } to { finishHour }:{ finishMin } </td>
+           <td className={ this.state.fiona } onClick={() => this.toggleColor("fiona")}></td>
+           <td className={ this.state.gabriel } onClick={() => this.toggleColor("gabriel") }></td>
+           <td className={ this.state.jeremy } onClick={() => this.toggleColor("jeremy") }></td>
+           <td className={ this.state.kevin } onClick={() => this.toggleColor("kevin") }></td>
+           <td className={ this.state.kyle } onClick={() => this.toggleColor("kyle") }></td>
+        </tr>
+      )
   }
 }
 
@@ -60,6 +68,14 @@ class Table extends React.Component {
           </thead>
           <tbody>
             {rows}
+            <tr>
+              <td>Add a new time</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
           </tbody>
         </table>
       </div>
