@@ -18,19 +18,18 @@ class Row extends React.Component {
       yellow: "red",
       red: "white",
     }
-    this.setState({ name: colors[this.state.name] });
+    this.setState({ [name]: colors[this.state[name]] });
     console.log(this.state.name);
   }
 
   render() {
       return <tr key={ this.props.timeslot.id }>
                <td>{ this.props.timeslot.start }</td>
-               REMOVE THE .BIND AND RELOAD PAGE TO START INFINITE LOOP
-               <td className={ this.state.fiona } onClick={ this.toggleColor.bind("fiona") }></td>
-               <td className={ this.state.gabriel } onClick={ this.toggleColor }></td>
-               <td className={ this.state.jeremy } onClick={ this.toggleColor }></td>
-               <td className={ this.state.kevin } onClick={ this.toggleColor }></td>
-               <td className={ this.state.kyle } onClick={ this.toggleColor }></td>
+               <td className={ this.state.fiona } onClick={() => this.toggleColor("fiona")}></td>
+               <td className={ this.state.gabriel } onClick={() => this.toggleColor("gabriel") }></td>
+               <td className={ this.state.jeremy } onClick={() => this.toggleColor("jeremy") }></td>
+               <td className={ this.state.kevin } onClick={() => this.toggleColor("kevin") }></td>
+               <td className={ this.state.kyle } onClick={() => this.toggleColor("kyle") }></td>
             </tr>
   }
 }
