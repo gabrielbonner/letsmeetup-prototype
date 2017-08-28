@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170823061537) do
+ActiveRecord::Schema.define(version: 20170826064056) do
 
   create_table "timeslots", force: :cascade do |t|
-    t.datetime "start"
-    t.datetime "finish"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "fiona", default: "white"
+    t.string "gabriel", default: "white"
+    t.string "jeremy", default: "white"
+    t.string "kevin", default: "white"
+    t.string "kyle", default: "white"
+    t.string "date"
+    t.string "startTime"
+    t.string "endTime"
   end
 
   create_table "users", force: :cascade do |t|

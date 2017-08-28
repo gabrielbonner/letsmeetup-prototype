@@ -16,14 +16,29 @@ class Row extends React.Component {
       white: "green",
       green: "yellow",
       yellow: "red",
+<<<<<<< HEAD
       red: "blue",
       blue: "white",
+=======
+      red: "white",
+      white: "blue",
+>>>>>>> 06c5ade1c17fc611beb3b9bac86aa74aa19be569
     }
     this.setState({ [name]: colors[this.state[name]] });
   }
 
 
   render() {
+<<<<<<< HEAD
+=======
+    IMPORT MOMENT.JS
+    PUT COLOR KEY AT BOTTOM OF TABLE, BLUE=PREFERRED
+    const date = new Date(this.props.timeslot.start).toDateString()
+    const startHour = new Date(this.props.timeslot.start).getHours()
+    const startMin = new Date(this.props.timeslot.start).getMinutes()
+    const finishHour = new Date(this.props.timeslot.finish).getHours()
+    const finishMin = new Date(this.props.timeslot.finish).getMinutes()
+>>>>>>> 06c5ade1c17fc611beb3b9bac86aa74aa19be569
       return (
         <tr key={ this.props.timeslot.id }>
            <td>{ this.props.timeslot.date } <br/> from { this.props.timeslot.startTime } to { this.props.timeslot.endTime} </td>
