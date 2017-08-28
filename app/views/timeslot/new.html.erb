@@ -1,0 +1,22 @@
+<%= form_for :timslot, url: timeslots_path do |f| %>
+  <p>
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </p>
+
+  <p>
+    <%= f.label :startTime %><br>
+    <%= f.text_field :startTime %>
+  </p>
+
+  <p>
+    <%= f.label :endTime %><br>
+    <%= f.text_field :endTime %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to("Dashboard", dashboard_index_url) %>

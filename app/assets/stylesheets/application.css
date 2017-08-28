@@ -34,6 +34,7 @@ td, th {
 .main {
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
 
 .table {
@@ -54,4 +55,8 @@ td, th {
 
 .red {
   background-color: red;
+}
+
+.blue {
+  background-color: blue;
 }

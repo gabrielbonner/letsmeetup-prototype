@@ -16,22 +16,17 @@ class Row extends React.Component {
       white: "green",
       green: "yellow",
       yellow: "red",
-      red: "white",
+      red: "blue",
+      blue: "white",
     }
     this.setState({ [name]: colors[this.state[name]] });
   }
 
 
   render() {
-    IMPORT MOMENT.JS
-    const date = new Date(this.props.timeslot.start).toDateString()
-    const startHour = new Date(this.props.timeslot.start).getHours()
-    const startMin = new Date(this.props.timeslot.start).getMinutes()
-    const finishHour = new Date(this.props.timeslot.finish).getHours()
-    const finishMin = new Date(this.props.timeslot.finish).getMinutes()
       return (
         <tr key={ this.props.timeslot.id }>
-           <td>{ date } <br/> from { startHour }:{ startMin } to { finishHour }:{ finishMin } </td>
+           <td>{ this.props.timeslot.date } <br/> from { this.props.timeslot.startTime } to { this.props.timeslot.endTime} </td>
            <td className={ this.state.fiona } onClick={() => this.toggleColor("fiona")}></td>
            <td className={ this.state.gabriel } onClick={() => this.toggleColor("gabriel") }></td>
            <td className={ this.state.jeremy } onClick={() => this.toggleColor("jeremy") }></td>
@@ -69,7 +64,7 @@ class Table extends React.Component {
           <tbody>
             {rows}
             <tr>
-              <td>Add a new time</td>
+              <td><a href="{ http://localhost:3000/timeslots/new }">Add a new time</a></td>
               <td></td>
               <td></td>
               <td></td>
